@@ -1,6 +1,6 @@
-# Health Analytics Case Study 
+# Mini Health Analytics Case Study 
 
-> This case study is contained within the [Serious SQL](https://www.datawithdanny.com)
+> This case study is contained within the [Serious SQL](https://www.datawithdanny.com) by Danny Ma. 
 ## 📕 **Table of contents**
 <!--ts-->
    * 🛠️ [Overview](#️-overview)
@@ -23,7 +23,7 @@ With the **Health Analytics Mini Case Study**, I queried data to bring insights 
 ---
 ## 🚀 Solutions
 
-![Question 1]
+### Question 1
 ### **How many unique users exist in the logs dataset?**
 ```sql
 SELECT COUNT (DISTINCT id)
@@ -47,7 +47,7 @@ FROM health.user_logs;
   GROUP BY 1;
   ```
 
-![Question 2]
+### Question 2
 ### **How many total measurements do we have per user on average?**
 ```sql
 SELECT
@@ -61,7 +61,7 @@ FROM user_measure_count;
 
 ---
 
-![Question 3]
+### Question 3
 ### **What about the median number of measurements per user?**
 ```sql 
 SELECT 
@@ -75,7 +75,7 @@ FROM user_measure_count;
 
 
 
-![Question 4]
+### Question 4
 ### **How many users have 3 or more measurements?**
 ```sql
 SELECT COUNT(*)
@@ -88,7 +88,7 @@ WHERE measure_count >= 3;
 |209                                     |
 
 
-![Question 5]
+### Question 5
 ### **How many users have 1,000 or more measurements?**
 ```sql 
 SELECT COUNT(*)
@@ -102,7 +102,7 @@ WHERE measure_count >= 1000;
 
 ---
 
-![Question 6](https://img.shields.io/badge/Question-6-971901)
+### Question 6
 ### **Have logged blood glucose measurements?**
 ```sql
 SELECT 
@@ -117,7 +117,7 @@ WHERE measure = 'blood_glucose';
 
 ---
 
-![Question 7]
+### Question 7
 ### 7. **Have at least 2 types of measurements?**
 ```sql
 SELECT 
@@ -133,7 +133,7 @@ WHERE unique_measures >= 2;
 
 ---
 
-![Question 8]
+### Question 8
 ### **Have all 3 measures - blood glucose, weight and blood pressure?**
 ```sql
 SELECT
@@ -142,13 +142,13 @@ FROM user_measure_count
 WHERE unique_measures = 3;
 ```
 
-|count                                   |
-|----------------------------------------|
-|50                                      |
+|count|
+|-----|
+|50   |
 
 ---
 
-![Question 9]
+### Question 9
 ### **What is the median systolic/diastolic blood pressure values?**
 ```sql
 SELECT
